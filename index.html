@@ -3,34 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Product preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- My fonts CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:opsz,wght@9..144,700&family=Montserrat&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- My CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <main>
+    <article class="product">
+      <picture class="product__img">
+        <source srcset="./images/image-product-desktop.jpg" media="(min-width: 600px)">
+        <img src="./images/image-product-mobile.jpg" alt="product__img">
+      </picture>
 
-  Perfume
+      <div class="product__content">
+        <p class="product__category">Perfume</p>
+      
+        <h1 class="product__title">Gabrielle Essence Eau De Parfum</h1>
+        
+        <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+        <div class="flex-group">
 
-  Gabrielle Essence Eau De Parfum
+          <span class="visually-hidden">Original price:</span>
+          <p class="product__price">$149.99</p>
 
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
+          <p class="product__original-price">
+            <span class="visually-hidden">Original price:</span>
+            <s>$169.99</s></p>
 
-  $149.99
-  $169.99
+        </div>
+        
+        <button class="button" data-icon="shopping-cart">Add to Cart</button>
+      </div>
+    </article>
+  </main>
 
-  Add to Cart
-  
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>
